@@ -17,9 +17,9 @@ spec:
     - secretKeyRef:
         name: image-creds
         key: image-creds.yaml
-    #- secretKeyRef:
-     #   name: gateway-license
-        #key: license.yaml
+    - secretKeyRef:
+        name: gateway-license
+        key: license.yaml
     - secretKeyRef:
         name: env
         key: env.yaml
