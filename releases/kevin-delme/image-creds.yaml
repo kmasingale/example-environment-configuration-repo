@@ -1,0 +1,16 @@
+apiVersion: bitnami.com/v1alpha1
+kind: SealedSecret
+metadata:
+  creationTimestamp: null
+  name: image-creds
+  namespace: delme
+spec:
+  encryptedData:
+    image-creds.yaml: AgCqKPyEMPk+Jt6nlucg92lSEhcWklYSilhXTls9Nr+T0fwKvZvtbu/YGd52xrwMHFl2NElAu/92DV5qVRA0z5kwHztIuh+xYnFISIV4RBc20E8hoFRuF/qKQeO4AVv1VXYQfz63B7PZo97mUrnzcHyzJMYgd9T+6pEvC6C5gBtGnIlJAY/LtJTaXlFnZDmeSgKHyCmZ3ii9rv/ZAF9QjZXQPAsnt3iViblCgn1ZW3qxptDIROF6NueUmu7vXKYAG/DqRwwCnFSlm79VNNkBhap3Sek1Lg37JceNcvkiPpSs18N3G6YCZ1HAMiqQM3t6LfHDrWLwYRd1PIuMr8q3P71SOJANI9KM3NGii9IFSTVOl/YGoX/OHESy3QzaFrN1/CNXrLOA6/4MPMBHVqUi7XExvLP7CrMTD3KGEpgFUobWVMO+8+8QKeHnEC5uiBi4YQT3oXwwg6Yt0R7TmEP1a/mH0xUDvSUqadJB05ET9lVCb3WeLXuUJTxm1YBfLAYToRALd2rbKZoQDVX/bI2W4kK+kmLBcNDz90FZA9rq6GtOGWCsEtQ+Md2HNDpHEfha9wUU3DdKuAP/srDSsXTiB1du6t83WkyhB1KEI/ZYDcuCr0JbIHze82E0PaNhju8aQNiJ8TSIafcyT2X69WCm2U4RsWOm+SxjXeRQQ6mGfHuJMBtXhc/TAWDQ4boU+T8v0Tkl2nspbX0T/C0gavtom3XIMM8V2hwXuJfBbKSP/JDg4oOZ0iwkhHLhkg==
+  template:
+    metadata:
+      creationTimestamp: null
+      name: image-creds
+      namespace: delme
+status: {}
+
