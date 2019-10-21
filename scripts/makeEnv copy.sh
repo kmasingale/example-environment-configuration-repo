@@ -70,19 +70,6 @@ function format_properties () {
     rm "$tempFile"
 }
 
-function format_properties_pm () {
-    tempFile="$(mktemp)"
-    grep . "$ENTRY" | while IFS= read -r line
-    do
-        key=$(echo "$line" | awk -F '=' '{print $1}')
-        value=$(echo "$line" | awk -F '=' '{print $2}')
-        echo "$key: \"$value\""
-    done > "$tempFile"
-
-    cat "$tempFile" | sed 's/^/    /' >> "$OUT"
-    rm "$tempFile"
-}
-
 function format_cert_file () {
     tempFile="$(mktemp)"
     for ENTRY in "certificates/"*
@@ -176,7 +163,7 @@ do
             ;;
         # Stored Passwords
         "stored-passwords.properties")
-            format_properties_pm "ENV.PASSWORD"
+            format_properties "ENV.PASSWORD"
             ;;
         esac
     elif [ "$extension" = "yaml" ]; then
@@ -232,9 +219,6 @@ do
         # Stored Passwords
         "stored-passwords.properties")
             format_properties "ENV.PASSWORD"
-            ;;
-        "pm.properties")
-            format_properties_pm
             ;;
         esac
     fi
