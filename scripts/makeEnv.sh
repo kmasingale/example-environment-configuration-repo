@@ -76,7 +76,7 @@ function format_properties_pm () {
     do
         key=$(echo "$line" | awk -F '=' '{print $1}')
         value=$(echo "$line" | awk -F '=' '{print $2}')
-        echo "$key: \"$value\""
+        echo "ENV.$key: \"$value\""
     done > "$tempFile"
 
     cat "$tempFile" | sed 's/^/    /' >> "$OUT"
