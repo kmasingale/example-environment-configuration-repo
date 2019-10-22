@@ -43,3 +43,6 @@ spec:
       - name: https
         internal: 8443
         external: 443
+      - name: admin-port
+        internal: 9443
+        external: 8443
